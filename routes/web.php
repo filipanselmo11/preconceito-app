@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PreconceitoController::class, 'index']);
 Route::get('/preconceitos/criar', [PreconceitoController::class, 'criar']);
 Route::post('/preconceitos', [PreconceitoController::class, 'store']);
+Route::delete('/preconceitos/{id}', [PreconceitoController::class, 'destroy']);

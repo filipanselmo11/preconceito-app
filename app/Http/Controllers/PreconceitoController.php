@@ -27,4 +27,9 @@ class PreconceitoController extends Controller
 
         return redirect('/')->with('msg', 'Preconceito criado com sucesso');
     }
+
+    public function destroy($id) {
+        Preconceito::findOrFail($id)->delete();
+        return redirect('/')->with('msg', 'Preconceito deletado com sucesso !');
+    }
 }
